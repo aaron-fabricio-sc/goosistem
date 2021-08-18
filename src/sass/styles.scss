@@ -474,11 +474,11 @@ body {
     }
   }
 
-  .icon-cards {
+  /* .icon-cards {
     width: 25vw;
     height: 12vw;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
 
     // This is the element that rotates with the animation
 
@@ -487,10 +487,10 @@ body {
     &__item {
       width: 25vw;
       height: 12vw;
-      max-width: 100px;
-      max-height: 100px;
+      max-width: 200px;
+      max-height: 200px;
     }
-  }
+  } */
   @keyframes carousel {
     0%,
     17.5% {

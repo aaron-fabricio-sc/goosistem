@@ -84,20 +84,3 @@
 
 // Demo only
 // ----------------------------------------------
-
-// Checkbox
-
-.checkbox {
-  position: relative;
-
-  font-size: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  transition: color 0.3s ease;
-  user-select: none;
-
-  &:hover {
-    color: #f7a95a;
-  }
-}

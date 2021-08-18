@@ -527,19 +527,6 @@ body {
     transform: translateZ(-40vw) rotateY(-360deg);
   }
 }
-.checkbox {
-  position: relative;
-  font-size: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  transition: color 0.3s ease;
-  user-select: none;
-}
-.checkbox:hover {
-  color: #f7a95a;
-}
-
 .contactos {
   padding: 40px;
   background: #737ca8;
@@ -826,19 +813,23 @@ footer .misionVision div p {
     font-size: 28px;
   }
 
-  .icon-cards {
+  /* .icon-cards {
     width: 25vw;
     height: 12vw;
-    max-width: 100px;
-    max-height: 100px;
-  }
-  .icon-cards__item {
-    width: 25vw;
-    height: 12vw;
-    max-width: 100px;
-    max-height: 100px;
-  }
+    max-width: 200px;
+    max-height: 200px;
 
+    // This is the element that rotates with the animation
+
+    // Individual cards
+
+    &__item {
+      width: 25vw;
+      height: 12vw;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  } */
   @keyframes carousel {
     0%, 17.5% {
       transform: translateZ(-100vw) rotateY(0);
