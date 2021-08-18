@@ -1,0 +1,14 @@
+webpack webpack-cli babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime html-webpack-plugin mini-css-extract-plugin css-loader sass sass-loader copy-webpack-plugin
+
+
+
+
+
+control de flujo de efectivo (caja)
+
+control de inventarios
+control de almzacenes
+control de ventas a credito
+reporte de ganancias
+
+

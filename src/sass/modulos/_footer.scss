@@ -1,0 +1,15 @@
+footer {
+  .misionVision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+      h3 {
+        color: $color-terciario;
+        font-size: $font-nm;
+      }
+      p {
+        font-size: $font-sm;
+      }
+    }
+  }
+}
