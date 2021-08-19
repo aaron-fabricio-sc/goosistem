@@ -15,6 +15,7 @@ module.exports = {
     assetModuleFilename: "assets/images/[hash][ext][query]",
   },
   mode: "production",
+  devtool: "source-map",
   resolve: {
     extensions: [".js"],
     alias: {
