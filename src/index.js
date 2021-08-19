@@ -1,11 +1,12 @@
 import "./sass/styles.scss";
-import todoEnUno from "./img/TodoEnUno.png";
-import corei5 from "./img/corei5.png";
-import corei5normal from "./img/core5normal.png";
-import corei3 from "./img/corei3.png";
-import impresoraTermica from "./img/impresoraTermica.png";
-import cajadeDinero from "./img/cajadeDinero.png";
-import lectorCodigoBarras from "./img/lectorCodigoBarras.png";
+import todoEnUnoTouch from "@images/todoEnUnoTactil.png";
+import todoEnUno from "@images/TodoEnUno.png";
+import corei5 from "@images/corei5.png";
+import corei5normal from "@images/core5normal.png";
+import corei3 from "@images/corei3.png";
+import impresoraTermica from "@images/impresoraTermica.png";
+import cajadeDinero from "@images/cajadeDinero.png";
+import lectorCodigoBarras from "@images/lectorCodigoBarras.png";
 
 function templateCard(descripcion, url, container) {
   let informacion = ` <div class="card">
@@ -27,6 +28,11 @@ function templateCard(descripcion, url, container) {
 }
 
 const cards = [
+  {
+    descripcion:
+      " terminal punto de venta Equipo all in one Pantalla tactil Impresora térmica Cajon portadinero",
+    url: todoEnUnoTouch,
+  },
   {
     descripcion:
       "Terminal punto de venta Equipo All in one Impresora térmica Cajon portadinero",
@@ -72,10 +78,10 @@ cards.forEach((e) => {
   templateCard(e.descripcion, e.url, content_card);
 });
 
-import farmaciaEster from "@imagesclientes/farmaEster.jpg";
-import heladosYeri from "@imagesclientes/HeladosYeri.jpg";
-import perdirAboca from "@imagesclientes/aPedirDeBoca.jpg";
-import Thiago from "@imagesclientes/Thiago.jpg";
+import farmaciaEster from "./assets/images/clientes/farmaEster.jpg";
+import heladosYeri from "./assets/images/clientes/HeladosYeri.jpg";
+import perdirAboca from "./assets/images/clientes/aPedirDeBoca.jpg";
+import Thiago from "./assets/images/clientes/Thiago.jpg";
 const containerClientes = document.getElementById("containerClientes");
 function templateClientes(ruta, container) {
   let informacion = `<div class="slide">

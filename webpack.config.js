@@ -18,8 +18,8 @@ module.exports = {
   resolve: {
     extensions: [".js"],
     alias: {
-      "@images": path.resolve(__dirname, "src/img"),
-      "@imagesclientes": path.resolve(__dirname, "src/img/clientes"),
+      "@images": path.resolve(__dirname, "src/assets/images"),
+      "@imagesclientes": path.resolve(__dirname, "src/asstes/images/clientes"),
     },
   },
   module: {
@@ -53,8 +53,12 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src", "img"),
+          from: path.resolve(__dirname, "src", "assets/images"),
           to: "assets/images",
+        },
+        {
+          from: path.resolve(__dirname, "src", "assets/videos"),
+          to: "assets/videos",
         },
       ],
     }),

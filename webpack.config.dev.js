@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPLugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -12,11 +13,12 @@ module.exports = {
     assetModuleFilename: "assets/images/[hash][ext][query]",
   },
   mode: "development",
+  watch: true,
   resolve: {
     extensions: [".js"],
     alias: {
-      "@images": path.resolve(__dirname, "src/img"),
-      "@imagesclientes": path.resolve(__dirname, "src/img/clientes"),
+      "@images": path.resolve(__dirname, "src/assets/images"),
+      "@imagesclientes": path.resolve(__dirname, "src/asstes/images/clientes"),
     },
   },
   module: {
@@ -43,6 +45,7 @@ module.exports = {
       inject: true,
       template: "./public/index.html",
       filename: "index.html",
+      minify: false,
     }),
     new MiniCssExtractPLugin({
       filename: "assets/[name].[contenthash].css",
@@ -50,10 +53,15 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src", "img"),
+          from: path.resolve(__dirname, "src", "assets/images"),
           to: "assets/images",
+        },
+        {
+          from: path.resolve(__dirname, "src", "assets/videos"),
+          to: "assets/videos",
         },
       ],
     }),
+    new CleanWebpackPlugin(),
   ],
 };
