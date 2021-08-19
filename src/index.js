@@ -72,10 +72,10 @@ cards.forEach((e) => {
   templateCard(e.descripcion, e.url, content_card);
 });
 
-import farmaciaEster from "./img/clientes/farmaEster.jpg";
-import heladosYeri from "./img/clientes/HeladosYeri.jpg";
-import perdirAboca from "./img/clientes/aPedirDeBoca.jpg";
-import Thiago from "./img/clientes/Thiago.jpg";
+import farmaciaEster from "@imagesclientes/farmaEster.jpg";
+import heladosYeri from "@imagesclientes/HeladosYeri.jpg";
+import perdirAboca from "@imagesclientes/aPedirDeBoca.jpg";
+import Thiago from "@imagesclientes/Thiago.jpg";
 const containerClientes = document.getElementById("containerClientes");
 function templateClientes(ruta, container) {
   let informacion = `<div class="slide">

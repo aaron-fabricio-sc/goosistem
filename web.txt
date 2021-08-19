@@ -1,4 +1,4 @@
-webpack webpack-cli babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime html-webpack-plugin mini-css-extract-plugin css-loader sass sass-loader copy-webpack-plugin
+webpack webpack-cli babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime html-webpack-plugin mini-css-extract-plugin css-loader sass sass-loader copy-webpack-plugin css-minimizer-webpack-plugin terser-webpack-plugin dotenv-webpack
 
 
 
