@@ -615,4 +615,10 @@ body {
       }
     }
   }
+  .trabajo {
+    &__titulo {
+      @include titulo();
+      font-size: $font-xl;
+    }
+  }
 }
