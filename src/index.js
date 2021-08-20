@@ -1,181 +1,10 @@
 import "./sass/styles.scss";
-import todoEnUnoTouch from "@images/todoEnUnoTactil.png";
-import todoEnUno from "@images/TodoEnUno.png";
-import corei5 from "@images/corei5.png";
-import corei5normal from "@images/core5normal.png";
-import corei3 from "@images/corei3.png";
-import impresoraTermica from "@images/impresoraTermica.png";
-import cajadeDinero from "@images/cajadeDinero.png";
-import lectorCodigoBarras from "@images/lectorCodigoBarras.png";
 
-function templateCard(descripcion, url, container) {
-  let informacion = ` <div class="card">
-                <div class="imgBox">
-                    <img src="${url}" alt="">
-                </div>
-                <div class="content">
-
-                    <h2>
-                        ${descripcion}
-                    </h2>
-                    <div class="content__boton">
-                        <a href="https://wa.me/+59170668135?text=Hola%20quiero%20más%20información%20de%20los%20productos." target="blank"><span>Contáctar...</span></a>
-
-                    </div>
-                </div>
-            </div>`;
-  container.innerHTML += informacion;
-}
-
-const cards = [
-  {
-    descripcion:
-      " terminal punto de venta Equipo all in one Pantalla tactil Impresora térmica Cajon portadinero",
-    url: todoEnUnoTouch,
-  },
-  {
-    descripcion:
-      "Terminal punto de venta Equipo All in one Impresora térmica Cajon portadinero",
-    url: todoEnUno,
-  },
-  {
-    descripcion:
-      "Core i5 Disco duro de 500 Gb. Memoria ram de 4 Gb. Pantalla de 20plgs LED touch camara web incorporada",
-    url: corei5,
-  },
-  {
-    descripcion:
-      "Core i5 Disco duro de 500 Gb. Memoria ram de 4 Gb. Pantalla de 20plgs Camara web incorporada",
-    url: corei5normal,
-  },
-  {
-    descripcion: `Core i3
-
-Disco duro de 200 Gb.
-
-Memoria ram de 2 Gb.
-
-Pantalla de 20"
-
-Resolucion de 1166 x 768`,
-    url: corei3,
-  },
-  {
-    descripcion: `Cajon portadinero SAT Apertura automática Para uso prolongado Pisa billetes metálico Fabricado con acero`,
-    url: cajadeDinero,
-  },
-  {
-    descripcion: `Impresora térmica Rowell Impresión de 150mm x seg. Compatible todos los Sistemas Operativos. Conector CA integrado`,
-    url: impresoraTermica,
-  },
-  {
-    descripcion: `Lector codigo de barras Conexión USB Escaneo de 72 lineas x seg. 7 tonos diferentes`,
-    url: lectorCodigoBarras,
-  },
-];
-const content_card = document.getElementById("content_card");
-cards.forEach((e) => {
-  templateCard(e.descripcion, e.url, content_card);
-});
-
-import farmaciaEster from "./assets/images/clientes/farmaEster.jpg";
-import heladosYeri from "./assets/images/clientes/HeladosYeri.jpg";
-import perdirAboca from "./assets/images/clientes/aPedirDeBoca.jpg";
-import Thiago from "./assets/images/clientes/Thiago.jpg";
-const containerClientes = document.getElementById("containerClientes");
-function templateClientes(ruta, container) {
-  let informacion = `<div class="slide">
-			<img src="${ruta}" height="100" width="250" alt="perdirAboca" />
-		</div>`;
-
-  container.innerHTML += informacion;
-}
-
-const Clientes = [
-  {
-    ruta: farmaciaEster,
-  },
-  {
-    ruta: heladosYeri,
-  },
-  {
-    ruta: Thiago,
-  },
-  {
-    ruta: perdirAboca,
-  },
-  {
-    ruta: farmaciaEster,
-  },
-  {
-    ruta: heladosYeri,
-  },
-  {
-    ruta: Thiago,
-  },
-  {
-    ruta: perdirAboca,
-  },
-  {
-    ruta: farmaciaEster,
-  },
-  {
-    ruta: heladosYeri,
-  },
-  {
-    ruta: Thiago,
-  },
-  {
-    ruta: perdirAboca,
-  },
-];
-Clientes.forEach((e) => {
-  templateClientes(e.ruta, containerClientes);
-});
-
-const evento = document.getElementById("send");
-const enviarFormulario = () => {
-  let nombre = document.getElementById("nombres").value;
-  let apellido = document.getElementById("apellidos").value;
-  let negocio = document.getElementById("negocio").value;
-
-  let mensaje = document.getElementById("mensaje").value;
-  let numero = +59169883567;
-  var win = window.open(
-    `https://wa.me/${numero}?text=Hola%20mi%20nombre%20es%20${nombre}
-%20${apellido},tengo%20un%20negocio%20de:${negocio},%20Asunto:%20${mensaje}`,
-    "_blank"
-  );
-};
-evento.addEventListener("click", enviarFormulario);
-
+import "./js/equipos";
+import "./js/clientes";
+import "./js/formulario";
+import "./js/numeroTrabajadores";
 //numeros y nombres
-
-const numerosNombres = [
-  {
-    nombre: "Ing Jhonny",
-    numero: "69883567",
-  },
-  {
-    nombre: "miguel",
-    numero: "73719577",
-  },
-  {
-    nombre: "Fabricio Santa Cruz",
-    numero: "70668135",
-  },
-];
-const numerosContainer = document.getElementById("container__numeros");
-function templateNumeros(numero, nombre = null, container) {
-  let informacion = `<a href="https://wa.me/+591${numero}?text=Hola%20quiero%20más%20información%20de%20los%20productos." target="__blank"> <i class="fab fa-whatsapp"></i> ${numero}</a>
-  
-  `;
-  container.innerHTML += informacion;
-}
-
-numerosNombres.forEach((e) => {
-  templateNumeros(e.numero, e.nombre, numerosContainer);
-});
 
 const caracteristicasPlus = [
   "Multiterminal. Posibilidad de trabajar con varias terminales HABILITACION DE MAS CAJAS.",
@@ -348,3 +177,30 @@ const $informesGerenciales = document.getElementById("informesGerenciales");
 for (const key in informesGerenciales) {
   templateCaracteristicas(informesGerenciales[key], $informesGerenciales);
 }
+
+const ExploracionDeLaInterfazDelSistema = "https://youtu.be/3SUaXmHH6Dw";
+const FuentesDeLasGrillas = "https://youtu.be/aSPR3oGTJRk";
+
+const entornoDeTrabajo = [
+  {
+    url: ExploracionDeLaInterfazDelSistema,
+    texto: "Exploración de la interfaz del sistema",
+  },
+  {
+    url: FuentesDeLasGrillas,
+    texto: "Fuentes de la grillas(ordenar, filtrar, ordenar)",
+  },
+];
+const containerEntorno = document.getElementById("entornoDeTrabajo");
+
+function templateListaPreguntas(url, texto, contenedor) {
+  let informacion = ` <li>
+                        <a href="${url}" target="_blank">${texto}</a>
+                     </li>`;
+
+  contenedor.innerHtml += informacion;
+}
+
+entornoDeTrabajo.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, containerEntorno);
+});

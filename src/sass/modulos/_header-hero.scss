@@ -1,0 +1,70 @@
+#header-hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .banner {
+    position: absolute;
+    z-index: -1;
+    height: inherit;
+    width: inherit;
+  }
+  .overley {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .contenido {
+    padding: 25px;
+    position: relative;
+    z-index: 10;
+    color: wheat;
+    height: inherit;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    .contenido__texto {
+      h1 {
+        text-shadow: 2px 5px 2px black;
+        font-size: $font-xxxl;
+        text-align: center;
+        color: $color-secundario;
+        .bienvenido {
+          display: block;
+          font-size: $font-xxl;
+          color: $color-terciario;
+        }
+        .goo {
+          color: $color-principal;
+        }
+      }
+      h2 {
+        text-align: center;
+        font-size: $font-xl;
+      }
+    }
+    .contenido__imagen {
+      display: flex;
+      align-items: flex-end;
+      .terminal {
+        width: 350px;
+        height: 250px;
+        float: left;
+      }
+      .persona {
+        width: 350px;
+        height: 350px;
+      }
+    }
+    .contenido__botones {
+      display: flex;
+      justify-content: center;
+      @include boton;
+    }
+  }
+}

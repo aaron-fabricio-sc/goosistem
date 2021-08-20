@@ -1,0 +1,89 @@
+#equipos {
+  padding: $xxxl;
+  background: rgb(115, 124, 168);
+  background: linear-gradient(
+    346deg,
+    rgba(115, 124, 168, 1) 0%,
+    rgba(31, 41, 99, 1) 32%,
+    rgba(3, 4, 36, 1) 100%
+  );
+  .equipos__titulo {
+    @include titulo();
+  }
+  .equipos__cards {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    .card {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin: $nm;
+      background: linear-gradient(
+        $color-principal,
+        $color-principal,
+        30%,
+        $azulOscuro,
+        30%,
+        $azulOscuro
+      );
+      border-radius: 20px;
+      overflow: hidden;
+
+      .imgBox {
+        background: rgb(206, 206, 206);
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        z-index: 1000;
+        transform-origin: top;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: $claro;
+
+        h2 {
+          font-size: $font-nm;
+          color: $claro;
+          text-align: center;
+          text-transform: capitalize;
+        }
+        .content__boton {
+          @include boton();
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+
+  .equipos__cards .card:hover .imgBox {
+    transform: translateY(0px) scale(0.4);
+  }
+
+  .equipos__cards .card:hover {
+    box-shadow: 0px 0px 5px white;
+  }
+}

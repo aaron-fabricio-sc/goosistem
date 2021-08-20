@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+.subtitulos {
+  @include titulo();
+  font-size: $font-xl;
+}
+.nav-link {
+  font-size: $font-lg;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}

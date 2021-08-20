@@ -21,7 +21,7 @@ module.exports = {
     extensions: [".js"],
     alias: {
       "@images": path.resolve(__dirname, "src/assets/images"),
-      "@imagesclientes": path.resolve(__dirname, "src/asstes/images/clientes"),
+      "@imagesclientes": path.resolve(__dirname, "src/assets/images/clientes"),
     },
   },
   module: {

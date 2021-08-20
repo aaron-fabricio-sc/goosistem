@@ -1,0 +1,227 @@
+@media screen and(max-width:720px) {
+  #header-hero {
+    .contenido {
+      padding: $nm;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      .contenido__texto {
+        grid-row: 2 / span 1;
+        h1 {
+          font-size: $font-xxl;
+
+          .bienvenido {
+            display: block;
+            font-size: $font-xl;
+            color: $color-terciario;
+          }
+          .goo {
+            color: $color-principal;
+          }
+        }
+        h2 {
+          padding: $lg;
+          font-size: $font-nm;
+        }
+      }
+      .contenido__imagen {
+        padding: $lg 0;
+        grid-row: 3 / span 1;
+        .persona {
+          width: 140px;
+          height: 150px;
+        }
+        .terminal {
+          width: 180px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  #sistema {
+    padding: $xxl;
+
+    .sistema__titulo {
+      font-size: $font-xl;
+    }
+    .sistema__compra {
+      h3 {
+        font-size: $font-lg;
+      }
+    }
+    .sistema__descripcion {
+      grid-template-columns: 1fr;
+
+      grid-gap: $lg;
+      .video {
+        width: 270px;
+        height: 180px;
+      }
+      .sistema__descripcion-texto {
+        color: $claro;
+        h3 {
+          font-size: $font-nm;
+          line-height: 30px;
+
+          .sistema__texto-titulo {
+            font-size: $font-lg;
+
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  #equipos {
+    width: 100%;
+    padding: $xxl;
+
+    .equipos__titulo {
+      @include titulo_small();
+    }
+    .equipos__cards {
+      .card {
+        margin: $sm;
+        width: 200px;
+        height: 200px;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+
+          h2 {
+            font-size: $font-sm;
+
+            text-align: center;
+            text-transform: capitalize;
+          }
+          .content__boton {
+            @include boton();
+            font-size: $font-sm;
+          }
+        }
+      }
+    }
+  }
+
+  #slider__clientes {
+    padding: $xl;
+    .slider__clientes-titulo {
+      @include titulo_small();
+    }
+  }
+
+  /* .icon-cards {
+    width: 25vw;
+    height: 12vw;
+    max-width: 200px;
+    max-height: 200px;
+
+    // This is the element that rotates with the animation
+
+    // Individual cards
+
+    &__item {
+      width: 25vw;
+      height: 12vw;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  } */
+  @keyframes carousel {
+    0%,
+    17.5% {
+      transform: translateZ(-100vw) rotateY(0);
+    }
+    27.5%,
+    45% {
+      transform: translateZ(-100vw) rotateY(-120deg);
+    }
+    55%,
+    72.5% {
+      transform: translateZ(-100vw) rotateY(-240deg);
+    }
+    82.5%,
+    100% {
+      transform: translateZ(-100vw) rotateY(-360deg);
+    }
+  }
+
+  .contactos {
+    width: 100%;
+    padding: $nm;
+
+    &__titulo {
+      @include titulo();
+      font-size: $font-xl;
+    }
+    fieldset {
+      padding: $lg 5px;
+
+      h3 {
+        color: $claro;
+        font-size: $font-nm;
+        span {
+          font-size: $font-sm;
+        }
+      }
+      .contactos__inputs {
+        width: 100%;
+
+        .box {
+          .label_formulario {
+            color: $claro;
+          }
+          input {
+            width: 95%;
+          }
+          textarea {
+            width: 95%;
+          }
+        }
+      }
+    }
+    .contactos__redes {
+      padding: $sm;
+
+      .facebook {
+        h4 {
+          font-size: $font-lg;
+        }
+        .fa-facebook-square {
+          font-size: 50px;
+        }
+      }
+      .numeros {
+        h4 {
+          font-size: $font-nm;
+        }
+        .container__numeros {
+          a {
+            margin: $sm 0;
+
+            font-weight: 500;
+
+            font-size: $font-nm;
+            .fa-whatsapp {
+              font-size: 15px;
+              border-radius: 50%;
+              color: white;
+              background: #1d8518;
+            }
+          }
+        }
+      }
+    }
+  }
+  .trabajo {
+    &__titulo {
+      @include titulo();
+      font-size: $font-xl;
+    }
+  }
+}
