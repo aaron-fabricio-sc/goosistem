@@ -192,8 +192,8 @@
         h4 {
           font-size: $font-lg;
         }
-        .fa-facebook-square {
-          font-size: 50px;
+        .icon__redes {
+          font-size: 30px;
         }
       }
       .numeros {
@@ -221,6 +221,13 @@
   .trabajo {
     &__titulo {
       @include titulo();
+      font-size: $font-xl;
+    }
+  }
+
+  .preguntas {
+    @include fondoColor();
+    &__titulo {
       font-size: $font-xl;
     }
   }

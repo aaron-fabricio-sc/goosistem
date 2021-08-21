@@ -17,5 +17,26 @@
 
 @import "./modulos/trabajos";
 
+.preguntas {
+  @include fondoColor();
+  &__titulo {
+    @include titulo();
+  }
+  &__container {
+    max-width: 800px;
+    width: 100%;
+    margin: $nm auto;
+
+    .link_preguntas {
+      color: $color-secundario;
+      font-size: $font-nm;
+      font-weight: 500;
+      &:hover {
+        color: $color-principal;
+      }
+    }
+  }
+}
+
 @import "./modulos/footer";
 @import "./modulos/media";

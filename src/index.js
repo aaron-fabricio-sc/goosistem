@@ -5,182 +5,18 @@ import "./js/clientes";
 import "./js/formulario";
 import "./js/numeroTrabajadores";
 //numeros y nombres
+import "./js/caracteristicasPlus";
 
-const caracteristicasPlus = [
-  "Multiterminal. Posibilidad de trabajar con varias terminales HABILITACION DE MAS CAJAS.",
-  "Trabajo en red (sin límite de puestos).",
-  "Accesible para trabajo desde PDA (PUESTO REMOTO)",
-  "Código de barras.",
-  "Personalización por cada terminal.",
-  "Comandas de cocina.",
-  "Estadísticas de fecha a fecha.",
-  "Control de stocks.",
-  "Pedidos de clientes y proveedores.",
-  "Presupuestos.",
-  "Control de mesas.",
-  "Control de camareros y vendedores.",
-  "Control de usuarios.",
-  "Informes y listados configurables por el usuario.",
-  "Posibilidad de diseñar nuevos listados por parte del usuario.",
-  "Asignación de tarifas por lectura de tarjeta de banda magnética.",
-  "Control de cierres parciales y totales.",
-  "Envío e-mail y SMS 3 móviles directamente del listado de clientes",
-  "Envío de los cierres de caja automática- mente a e-maíl o por SMS",
-  "Acceso y modiñcáción de cualquier ticket o factura del histórico",
-  "Reproductor Multimedia integrado para sonido ambiental  mp3, midi",
-  "Separación y división de ticket opcional al cobro",
-  "Cambio de colores del TPV a gusto del personal",
-  "Cambio de la posición de los botones para una mayor ergonomía de trabajo",
-  "Cambio de camarero personalizado con fotografía personal incluída",
-  "Venta de producto en porciones o medi- das (ideal para bebidas y raciones)",
-  "Nombre de los salones diseñables por el usuario.",
-  "Realización de copias de seguridad personalizables por el usuario.",
-  "Visualización automática de salones (tanto en Terminal como en PDA).",
-  "Agrupación automática de cantidades en una línea (Tickets y Facturas).",
-  "Emisión de tickets desde la pantalla de venta (TPV).",
-  "Convertir un ticket emitido en factura.",
-  "Reimprimir cualquier ticket o factura del histórico.",
-  "Imprimir tickets, facturas y cierres en PDF.",
-  "Opción de desglose de IVA en informes de TPV (tickets, facturas y cierres).",
-  "Envío de informes de TPV (tickets, y cierres) por e-mail.",
-  "Mayor facilidad en la configuración de impresoras.",
-  "Nuevo diseño de teclado en pantalla (mayor tamaño y manejabilidad).",
-  "Contraseña individual por cada camare- ro(opciona1).",
-  "Nuevo salón 3D tanto desde TPV como desde PDA.",
-  "Unir mesas visualmente de sde salón.",
-  "Control de balanzas y venta por peso.",
-  "Soporte para cajones serie RS-232. (cajon porta dinero)",
-  "Aviso de ruptura de stock y stock bajo mínimos desde TPV.",
-  "Selección de distintas impresoras para ticket, e informes.",
-  "Soporte para seis impresoras de comandas.",
-  "Apertura de cajón por distinta impresora de ticket.",
-  "Artículos combinados.",
-  "Artículos compuestos.",
-  "Control de invitaciones y consumo personal.",
-  "Generador de informes de TPV con control total de conñguración",
-  "Puesta a cero de los movimientos de la empresa.",
-  "Opción de deshabilitar botón eliminar líneas de ticket.",
-  "Aviso desde salón de mesas que han pedido comprobante.",
-  "Imágenes de artículos y familias ordenadas por categorías.",
-  "Opción de apagado automático del equipo al salir del TPV.",
-  "Entrada directa a pantalla de ventas TPV  entrar a la aplicación.",
-  "Impresión automática de comandas de cocina.",
-];
+const ExploracionDeLaInterfazDelSistema = "https://youtu.be/_nDGzplKnsY";
+const FuentesDeLasGrillas = "https://youtu.be/aSPR3oGTJRk";
+const containerEntorno = document.getElementById("entornoDeTrabajo");
+function templateListaPreguntas(ruta, texto, container) {
+  let informacion = `<li>
+                                       <a href="${ruta}" class="link_preguntas" target="__blank">${texto}</a>
+                                   </li>`;
 
-const listadoPlus = document.getElementById("listadoPlus");
-
-function templateCaracteristicas(caracteristicas, container) {
-  let informacion = `
-  <li> ${caracteristicas}</li>
-`;
   container.innerHTML += informacion;
 }
-
-for (const key in caracteristicasPlus) {
-  templateCaracteristicas(caracteristicasPlus[key], listadoPlus);
-}
-
-const itemsDeProducionServiciosFacturar = [
-  "Registro de productos y sus particularidades como el nombre comercial, presentación, nombre genérico datos financieros proveedor habitual fotocaracterísticas, familia o grupos, subgrupos, bienes o servicios y otros.",
-  "Generación de códigos inteligentes según criterio seleccionado numérico o alfanumérico y registro de códigos secundarios (modelo, código proveedor, barcode).",
-  "Registro de servicios (envío, asistencia, instalación, etc.)",
-  "Registro y generación del código de barras (EAN13 y CODE128)",
-  "Registro de varios códigos de barras por producto.",
-  "Manejo de hasta cuatro precios de productos con cálculo de márgenes de ganancias",
-];
-const $itemsDeProducionServiciosFacturar = document.getElementById(
-  "itemsDeProducionServiciosFacturar"
-);
-for (const key in itemsDeProducionServiciosFacturar) {
-  templateCaracteristicas(
-    itemsDeProducionServiciosFacturar[key],
-    $itemsDeProducionServiciosFacturar
-  );
-}
-
-const facturacionComputarizadaQR = [
-  "Genera el CÓDIGO DE CONTROL",
-  "Genera el CÓDIGO QR",
-  "Generar los Libros de Compras y Ventas (LCV) compatible con LCV Facilito en formato XLS, CSV y TXT.",
-  "Emisión de facturas en distintos tamaños (carta, media carta, cuarto oficio y cinta).",
-  "Emisión de facturas con características especiales (sin derecho a crédito fiscal, alquiler, tasa cero y de exportación)",
-  "Las facturas pueden exportarse a formato PDF y enviarse fácilmente por correo electrónico.",
-  "Registro automático de clientes con reconociendo su NIT.",
-  "Permite registrar facturas manuales.",
-];
-
-const $facturacionComputarizadaQR = document.getElementById(
-  "facturacionComputarizadaQR"
-);
-
-for (const key in facturacionComputarizadaQR) {
-  templateCaracteristicas(
-    facturacionComputarizadaQR[key],
-    $facturacionComputarizadaQR
-  );
-}
-
-const clientes = [
-  "Registro completo de los clientes (datos generales, garante, foto y anexos) para historial de ventas, tareas de marketing, cobranzas y otros.",
-  "Especificación de límite y tiempo de crédito",
-  "Agrupación de clientes en diferentes categorías o grupos",
-];
-
-const $clientes = document.getElementById("clientes");
-for (const key in clientes) {
-  templateCaracteristicas(clientes[key], $clientes);
-}
-
-const ventasRegistradas = [
-  "Múltiples criterios de búsqueda de productos o servicios.",
-  "Diferentes formas de pago: efectivo, tarjeta, cheque, depósito",
-  "Posibilidad de realizar ventas-prepago.",
-  "Venta mayorista, minorista, por paquetes o por unidades.",
-  "Cálculo y registro de efectivo recibido y el cambio a entregar",
-  "Venta con opción de descuento general o por cliente.",
-];
-
-const $ventasRegistradas = document.getElementById("ventasRegistradas");
-for (const key in ventasRegistradas) {
-  templateCaracteristicas(ventasRegistradas[key], $ventasRegistradas);
-}
-
-const administracionSeguridad = [
-  "Configuración del sistema para adaptarse a su negocio.",
-  "Registro de usuarios del sistema, con la fotografía de los usuarios, así como su hoja de vida respectiva.",
-  "Configuración de roles o perfiles (administrador, operador y vendedor) de forma personalizada, mediante la asignación y revocación de permisos para el usuario sobre las funciones del sistema.",
-  "Generación de copias de respaldo (backups) de la base de datos de forma manual y automática.",
-  "Registro de datos generales de la empresa así como el logotipo.",
-  "Mantiene la privacidad de los datos sensibles como los costos de adquisición, ganancias y contacto con proveedores.",
-];
-
-const $administracionSeguridad = document.getElementById(
-  "administracionSeguridad"
-);
-for (const key in administracionSeguridad) {
-  templateCaracteristicas(
-    administracionSeguridad[key],
-    $administracionSeguridad
-  );
-}
-
-const informesGerenciales = [
-  "De las compras y ventas, por rango de fechas, por día y por horas, por vendedor, por cliente, por producto, etc.",
-  "De las ganancias, ventas y compras filtradas por varios criterios.",
-  "Todos los listados los puede exportar a un archivo para luego utilizarlos con Hojas de cálculo y/o Procesadores de Texto",
-  "Reportes de movimientos comerciales detallado y resumido.",
-  "Reporte de información tributaria para declaraciones.",
-  "Capacidad para exportar todos los registros a Excel.",
-];
-
-const $informesGerenciales = document.getElementById("informesGerenciales");
-for (const key in informesGerenciales) {
-  templateCaracteristicas(informesGerenciales[key], $informesGerenciales);
-}
-
-const ExploracionDeLaInterfazDelSistema = "https://youtu.be/3SUaXmHH6Dw";
-const FuentesDeLasGrillas = "https://youtu.be/aSPR3oGTJRk";
-
 const entornoDeTrabajo = [
   {
     url: ExploracionDeLaInterfazDelSistema,
@@ -191,16 +27,208 @@ const entornoDeTrabajo = [
     texto: "Fuentes de la grillas(ordenar, filtrar, ordenar)",
   },
 ];
-const containerEntorno = document.getElementById("entornoDeTrabajo");
-
-function templateListaPreguntas(url, texto, contenedor) {
-  let informacion = ` <li>
-                        <a href="${url}" target="_blank">${texto}</a>
-                     </li>`;
-
-  contenedor.innerHtml += informacion;
-}
 
 entornoDeTrabajo.forEach((e) => {
   templateListaPreguntas(e.url, e.texto, containerEntorno);
+});
+
+const instalarDependencias = "https://youtu.be/aZ0_rs9BaLA";
+const configuracionDeParametros = "https://youtu.be/bL5V0sPE2Ac";
+const $instalacionConfiguracion = document.getElementById(
+  "instalacionConfiguracion"
+);
+const instalacionYconfiguracion = [
+  {
+    url: instalarDependencias,
+    texto: "Instalación de Dependencias.",
+  },
+  {
+    url: configuracionDeParametros,
+    texto: "Configuración de parametros y alta de usuarios.",
+  },
+];
+instalacionYconfiguracion.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $instalacionConfiguracion);
+});
+
+const RegistrnadoProveedoresYresgistros = "https://youtu.be/_nDGzplKnsY";
+const RegisrtroDeSaldos = "https://youtu.be/I7UKn1Qgig4";
+const operacionesDeSistemas = "https://youtu.be/13_WKLOxsXU";
+
+const $primerosPasos = document.getElementById("primerosPasos");
+
+const primerosPasos = [
+  {
+    url: RegistrnadoProveedoresYresgistros,
+    texto: "Registrando proveedores y productos.",
+  },
+  {
+    url: RegisrtroDeSaldos,
+    texto: "Registro saldos iniciales en stock y clientes",
+  },
+  {
+    url: operacionesDeSistemas,
+    texto: "Operación del sistema",
+  },
+];
+
+primerosPasos.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $primerosPasos);
+});
+
+const RegistroCompras = "https://youtu.be/A9YM-UlxsCQ";
+const RegistroVentas = "https://youtu.be/VgEVI3cOAl8";
+const RegistroDeTraspasos = "https://youtu.be/Z-T8IpJnje0";
+const CuentasPorPagarYcobrar = "https://youtu.be/8MSIdIdDZAQ";
+const cotizacionesProformas = "https://youtu.be/y1zIS5t7IwA";
+const pedidosDeRepocicion = "https://youtu.be/SbviHR9z-vM";
+const devolucionDeVenta = "https://youtu.be/8lZGg1fY6HA";
+const devolucionDeCompra = "https://youtu.be/JgCblo2YqYI";
+const cajaChica = "";
+const $registroMovimientos = document.getElementById("registroMovimientos");
+const registroMovimientos = [
+  {
+    url: RegistroCompras,
+    texto: "Registro de Compras",
+  },
+  {
+    url: RegistroVentas,
+    texto: "Registro de Ventas",
+  },
+  {
+    url: RegistroDeTraspasos,
+    texto: "Registro de traspasos inter-almacen",
+  },
+  {
+    url: CuentasPorPagarYcobrar,
+    texto: "Cuentas por pagar y cunetas por cobrar",
+  },
+  {
+    url: cotizacionesProformas,
+    texto: "Cotizaciones Y proformas",
+  },
+  {
+    url: pedidosDeRepocicion,
+    texto: "Pedidos de reposición",
+  },
+  {
+    url: devolucionDeVenta,
+    texto: "Devoluciones de venta",
+  },
+  {
+    url: devolucionDeCompra,
+    texto: "Devolución De Compra",
+  },
+  {
+    url: cajaChica,
+    texto: "Registro de movimientos de caja chica",
+  },
+];
+
+registroMovimientos.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $registroMovimientos);
+});
+
+const registroProveeadores = "";
+const gestionCatalogo = "";
+const codigoBarras = "";
+const registroAlmacenes = "";
+const registroClientes = "";
+const gestionInventario = "";
+const importacionExportacionExcel = "";
+
+const $registrosMaestros = document.getElementById("registrosMaestros");
+
+const registrosMaestros = [
+  {
+    url: registroProveeadores,
+    texto: "Registrando Proveedores",
+  },
+  {
+    url: gestionCatalogo,
+    texto: "Gestion del catálogo de venta",
+  },
+  {
+    url: codigoBarras,
+    texto: "Manejo del Código de barras",
+  },
+  {
+    url: registroAlmacenes,
+    texto: "Registro de almacenes",
+  },
+  {
+    url: registroClientes,
+    texto: "Registro de clientes",
+  },
+  {
+    url: gestionInventario,
+    texto: "Gestion de inventario",
+  },
+  {
+    url: importacionExportacionExcel,
+    texto: "Exportación e importación de registros con excel",
+  },
+];
+registrosMaestros.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $registrosMaestros);
+});
+
+const analisesDeInventario = "";
+const monitoreoVencimiento = "";
+const reimpresionDocumentos = "";
+const reportesDeTexto = "";
+
+const $reportesDocumentos = document.getElementById("reportesDocumentos");
+
+const reportesDocumentos = [
+  {
+    url: analisesDeInventario,
+    texto: "Análises de inventario con indicadores de gestión",
+  },
+  {
+    url: monitoreoVencimiento,
+    texto:
+      "Monitoreo de vencimientos, existencias mínimas, cuentas en mora y otros",
+  },
+  {
+    url: reimpresionDocumentos,
+    texto: "Reimpresión de documentos comerciales",
+  },
+  {
+    url: reportesDeTexto,
+    texto: "Reportes de textos e informes estadísticos",
+  },
+];
+
+reportesDocumentos.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $reportesDocumentos);
+});
+
+const licenciaSoftware = "";
+const creandoUsuarios = "";
+const copiasRespaldo = "";
+const certificadoCodigo = "";
+
+const $seguridadInformacion = document.getElementById("seguridadInformacion");
+
+const seguridadInformacion = [
+  {
+    url: licenciaSoftware,
+    texto: "Licencia del software",
+  },
+  {
+    url: creandoUsuarios,
+    texto: "Creando usuarios",
+  },
+  {
+    url: copiasRespaldo,
+    texto: "Copias de respaldo y restauración",
+  },
+  {
+    url: certificadoCodigo,
+    texto: "Certificación del código de control",
+  },
+];
+seguridadInformacion.forEach((e) => {
+  templateListaPreguntas(e.url, e.texto, $seguridadInformacion);
 });
