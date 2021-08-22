@@ -84,7 +84,7 @@ const cotizacionesProformas = "https://youtu.be/y1zIS5t7IwA";
 const pedidosDeRepocicion = "https://youtu.be/SbviHR9z-vM";
 const devolucionDeVenta = "https://youtu.be/8lZGg1fY6HA";
 const devolucionDeCompra = "https://youtu.be/JgCblo2YqYI";
-const cajaChica = "";
+const cajaChica = "https://youtu.be/4Uc2ssnBglg";
 const $registroMovimientos = document.getElementById("registroMovimientos");
 const registroMovimientos = [
   {
@@ -129,13 +129,13 @@ registroMovimientos.forEach((e) => {
   templateListaPreguntas(e.url, e.texto, $registroMovimientos);
 });
 
-const registroProveeadores = "";
-const gestionCatalogo = "";
-const codigoBarras = "";
-const registroAlmacenes = "";
-const registroClientes = "";
-const gestionInventario = "";
-const importacionExportacionExcel = "";
+const registroProveeadores = "https://youtu.be/hQDpGgSQ2x0";
+const gestionCatalogo = "https://youtu.be/azBwsUwW1yQ";
+const codigoBarras = "https://youtu.be/VGKEI6SSjrA";
+const registroAlmacenes = "https://youtu.be/I4J5Edj2UUc";
+const registroClientes = "https://youtu.be/ganYVvKMWx0";
+const gestionInventario = "https://youtu.be/xze_TnpQ1q4";
+const importacionExportacionExcel = "https://youtu.be/JevSuGoO4W4";
 
 const $registrosMaestros = document.getElementById("registrosMaestros");
 
@@ -173,17 +173,17 @@ registrosMaestros.forEach((e) => {
   templateListaPreguntas(e.url, e.texto, $registrosMaestros);
 });
 
-const analisesDeInventario = "";
-const monitoreoVencimiento = "";
-const reimpresionDocumentos = "";
-const reportesDeTexto = "";
+const analisesDeInventario = "https://youtu.be/lDUqaT-Y5I0";
+const monitoreoVencimiento = "https://youtu.be/TPm8m5kRiuE";
+const reimpresionDocumentos = "https://youtu.be/Yy4CoRR0W-8";
+const reportesDeTexto = "https://youtu.be/-ON7FUwneWg";
 
 const $reportesDocumentos = document.getElementById("reportesDocumentos");
 
 const reportesDocumentos = [
   {
     url: analisesDeInventario,
-    texto: "Análises de inventario con indicadores de gestión",
+    texto: "Análisis de inventario con indicadores de gestión",
   },
   {
     url: monitoreoVencimiento,
