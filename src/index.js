@@ -204,10 +204,10 @@ reportesDocumentos.forEach((e) => {
   templateListaPreguntas(e.url, e.texto, $reportesDocumentos);
 });
 
-const licenciaSoftware = "";
-const creandoUsuarios = "";
-const copiasRespaldo = "";
-const certificadoCodigo = "";
+const licenciaSoftware = "https://youtu.be/XbSW8pgHNS8";
+const creandoUsuarios = "https://youtu.be/LvTyJTcgsto";
+const copiasRespaldo = "https://youtu.be/WAPWPFIlfvo";
+const certificadoCodigo = "https://youtu.be/Cy6qDXuIScw";
 
 const $seguridadInformacion = document.getElementById("seguridadInformacion");
 
