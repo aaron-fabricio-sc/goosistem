@@ -3,14 +3,14 @@ const numerosNombres = [
     nombre: "Ing Jhonny",
     numero: "69883567",
   },
-  {
+  /* {
     nombre: "miguel",
     numero: "73719577",
   },
   {
     nombre: "Fabricio Santa Cruz",
     numero: "70668135",
-  },
+  }, */
 ];
 const numerosContainer = document.getElementById("container__numeros");
 function templateNumeros(numero, nombre = null, container) {

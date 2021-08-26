@@ -1,8 +1,8 @@
-import todoEnUnoTouch from "@images/todoEnUnoTactil.png";
+import todoEnUnoTouch from "@images/elo_e-series_features_914x570_right-removebg-preview.png";
 import todoEnUno from "@images/TodoEnUno.png";
 import corei5 from "@images/corei5.png";
 import corei5normal from "@images/core5normal.png";
-import corei3 from "@images/corei3.png";
+import corei3 from "@images/POS-LCB-HON-005_grande-removebg-preview.png";
 import impresoraTermica from "@images/impresoraTermica.png";
 import cajadeDinero from "@images/cajadeDinero.png";
 import lectorCodigoBarras from "@images/lectorCodigoBarras.png";
@@ -29,7 +29,7 @@ function templateCard(descripcion, url, container) {
 const cards = [
   {
     descripcion:
-      " terminal punto de venta Equipo all in one Pantalla tactil Impresora térmica Cajon portadinero",
+      " Módelo IntelliTouch ZB - 15E2 Procesador Intel CELERON 2.4GHz Gráficos HD Intel Pantalla de 15 pulgadas Disco Duro de 320 GB Memoria RAM 4 GB Windows 7 Pro",
     url: todoEnUnoTouch,
   },
   {
@@ -48,15 +48,7 @@ const cards = [
     url: corei5normal,
   },
   {
-    descripcion: `Core i3
-
-Disco duro de 200 Gb.
-
-Memoria ram de 2 Gb.
-
-Pantalla de 20"
-
-Resolucion de 1166 x 768`,
+    descripcion: `Lector Código de Barras Omnidireccional  Tecnología laser de alta velocidad: 1120 scans por segundo. Lectura  hasta 22 cm de distancia  Interface USB`,
     url: corei3,
   },
   {
