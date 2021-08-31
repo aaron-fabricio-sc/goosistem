@@ -76,8 +76,8 @@ primerosPasos.forEach((e) => {
   templateListaPreguntas(e.url, e.texto, $primerosPasos);
 });
 
-const RegistroCompras = "https://youtu.be/A9YM-UlxsCQ";
-const RegistroVentas = "https://youtu.be/VgEVI3cOAl8";
+const RegistroCompras = "https://youtu.be/VgEVI3cOAl8";
+const RegistroVentas = "https://youtu.be/A9YM-UlxsCQ";
 const RegistroDeTraspasos = "https://youtu.be/Z-T8IpJnje0";
 const CuentasPorPagarYcobrar = "https://youtu.be/8MSIdIdDZAQ";
 const cotizacionesProformas = "https://youtu.be/y1zIS5t7IwA";
@@ -88,12 +88,12 @@ const cajaChica = "https://youtu.be/4Uc2ssnBglg";
 const $registroMovimientos = document.getElementById("registroMovimientos");
 const registroMovimientos = [
   {
-    url: RegistroCompras,
-    texto: "Registro de Compras",
-  },
-  {
     url: RegistroVentas,
     texto: "Registro de Ventas",
+  },
+  {
+    url: RegistroCompras,
+    texto: "Registro de Compras",
   },
   {
     url: RegistroDeTraspasos,
